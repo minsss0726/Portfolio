@@ -6,6 +6,10 @@
 export interface ProjectItem {
   id: string;
   name: string;
+  /** 카드·상세에 표시할 대표 이미지 경로 (public 기준) */
+  image?: string;
+  /** 이미지 비율 "가로/세로" (미지정 시 1460/834) */
+  imageAspectRatio?: string;
   /** 카드에 표시할 짧은 설명 */
   shortDescription: string;
   period: string;
@@ -22,6 +26,8 @@ export const projects: ProjectItem[] = [
   {
     id: "shinhan-academy",
     name: "신한DS 금융SW 아카데미 웹 서비스",
+    image: "/images/shinhanacademy.png",
+    imageAspectRatio: "3024/1442",
     shortDescription:
       "기존 서비스 리뉴얼을 통한 성능 개선 및 사용자 경험 향상",
     period: "2025.12.01 ~ 2026.01.20",
@@ -53,6 +59,8 @@ export const projects: ProjectItem[] = [
   {
     id: "ohgoodpay",
     name: "OhgoodPay 오굿페이 (BNPL 결제+숏폼 서비스)",
+    image: "/images/ohgoodpay.png",
+    imageAspectRatio: "2088/1170",
     shortDescription:
       "후불결제(BNPL)와 숏폼을 결합한 MZ 세대 타겟 웹 서비스",
     period: "2025.09.01 ~ 2025.09.30",
@@ -84,6 +92,8 @@ export const projects: ProjectItem[] = [
   {
     id: "ohgoodfood",
     name: "OhgoodFood 오굿푸드 (멀티샵 서비스)",
+    image: "/images/ohgoodfood.png",
+    imageAspectRatio: "1460/834",
     shortDescription:
       "폐기 예정 음식 저가 판매·합리적 구매가 가능한 멀티샵 플랫폼",
     period: "2025.06.16 ~ 2025.07.11",

@@ -15,17 +15,33 @@ function ProjectCard({
     <button
       type="button"
       onClick={onClick}
-      className="w-full rounded-2xl border border-neutral-200 bg-neutral-50/50 p-6 text-left transition-all duration-200 ease-in-out hover:scale-[1.01] hover:border-neutral-300 hover:bg-neutral-100 focus:outline-none focus:ring-1 focus:ring-neutral-900 dark:border-neutral-800 dark:bg-neutral-900/30 dark:hover:border-neutral-700 dark:hover:bg-neutral-800/50 dark:focus:ring-neutral-100 md:p-8"
+      className="w-full overflow-hidden rounded-2xl border border-neutral-200 bg-neutral-50/50 text-left transition-all duration-200 ease-in-out hover:scale-[1.01] hover:border-neutral-300 hover:bg-neutral-100 focus:outline-none focus:ring-1 focus:ring-neutral-900 dark:border-neutral-800 dark:bg-neutral-900/30 dark:hover:border-neutral-700 dark:hover:bg-neutral-800/50 dark:focus:ring-neutral-100 md:p-0"
       aria-label={`${project.name} 상세 보기`}
     >
-      <h3 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100">
-        {project.name}
-      </h3>
-      <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400 line-clamp-2">
-        {project.shortDescription}
-      </p>
-      <div className="mt-3 flex flex-wrap items-center gap-1.5">
-        <TechIconsOnly stack={project.stack} size={18} />
+      {project.image && (
+        <div
+          className="relative w-full shrink-0 overflow-hidden bg-neutral-200 dark:bg-neutral-800"
+          style={{
+            aspectRatio: project.imageAspectRatio ?? "1460/834",
+          }}
+        >
+          <img
+            src={project.image}
+            alt=""
+            className="h-full w-full object-cover object-center"
+          />
+        </div>
+      )}
+      <div className="p-6 md:p-8">
+        <h3 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100">
+          {project.name}
+        </h3>
+        <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400 line-clamp-2">
+          {project.shortDescription}
+        </p>
+        <div className="mt-3 flex flex-wrap items-center gap-1.5">
+          <TechIconsOnly stack={project.stack} size={18} />
+        </div>
       </div>
     </button>
   );
@@ -85,6 +101,20 @@ function ProjectDetailModal({
             </span>
           </button>
         </div>
+        {project.image && (
+          <div
+            className="relative w-full shrink-0 overflow-hidden bg-neutral-100 dark:bg-neutral-900"
+            style={{
+              aspectRatio: project.imageAspectRatio ?? "1460/834",
+            }}
+          >
+            <img
+              src={project.image}
+              alt=""
+              className="h-full w-full object-cover object-center"
+            />
+          </div>
+        )}
         <div className="space-y-6 p-6">
           <div className="flex flex-wrap items-center gap-2 text-sm text-neutral-500 dark:text-neutral-400">
             <span>{project.period}</span>
@@ -102,6 +132,17 @@ function ProjectDetailModal({
               </>
             )}
           </div>
+          {project.link && (
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 rounded-xl border border-neutral-200 bg-neutral-50 py-3 px-4 text-sm font-medium text-neutral-800 transition-all duration-200 ease-in-out hover:border-neutral-300 hover:bg-neutral-100 dark:border-neutral-700 dark:bg-neutral-800/50 dark:text-neutral-200 dark:hover:border-neutral-600 dark:hover:bg-neutral-800"
+            >
+              <span aria-hidden="true">↗</span>
+              해당 서비스 페이지로 이동
+            </a>
+          )}
           <div>
             <h3 className="mb-1 text-sm font-medium text-neutral-500 dark:text-neutral-400">
               설명
