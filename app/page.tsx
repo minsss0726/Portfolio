@@ -1,4 +1,5 @@
 import { Navbar } from "@/app/components/layout/Navbar";
+import { IntroHero } from "@/app/components/sections/IntroHero";
 import { ProfileSection } from "@/app/components/sections/ProfileSection";
 import { CareerSection } from "@/app/components/sections/CareerSection";
 import { EducationSection } from "@/app/components/sections/EducationSection";
@@ -13,16 +14,11 @@ export default function Home() {
       <Navbar />
 
       <main className="mx-auto max-w-2xl px-4 py-8 pb-20 sm:px-6 sm:py-12">
-        <header className="mb-12 text-center sm:text-left">
-          <h1 className="text-4xl font-bold">포트폴리오</h1>
-          <p className="mt-2 text-neutral-600 dark:text-neutral-400">
-            Next.js 기반 개발자 포트폴리오 웹사이트
-          </p>
-        </header>
+        <IntroHero />
 
         <section
           id="profile"
-          className="scroll-mt-20 flex flex-col gap-12"
+          className="scroll-mt-20 mb-24 flex flex-col gap-12"
           aria-labelledby="profile-section-heading"
         >
           <h2
@@ -40,7 +36,7 @@ export default function Home() {
 
         <section
           id="career"
-          className="scroll-mt-20 flex flex-col gap-12"
+          className="scroll-mt-20 mb-24 flex flex-col gap-12"
           aria-labelledby="career-section-heading"
         >
           <h2
