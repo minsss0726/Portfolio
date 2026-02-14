@@ -2,6 +2,7 @@
 
 import { useState, useCallback, useEffect } from "react";
 import { projects, type ProjectItem } from "@/app/data/projects";
+import { TechIcons, TechIconsOnly } from "@/app/utils/techIcons";
 
 function ProjectCard({
   project,
@@ -23,6 +24,9 @@ function ProjectCard({
       <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400 line-clamp-2">
         {project.shortDescription}
       </p>
+      <div className="mt-3 flex flex-wrap items-center gap-1.5">
+        <TechIconsOnly stack={project.stack} size={18} />
+      </div>
     </button>
   );
 }
@@ -118,6 +122,9 @@ function ProjectDetailModal({
             <h3 className="mb-2 text-sm font-medium text-neutral-500 dark:text-neutral-400">
               사용 스택
             </h3>
+            <div className="mb-2 flex flex-wrap items-center gap-2">
+              <TechIcons stack={project.stack} size={20} />
+            </div>
             <ul className="list-inside list-disc space-y-1 text-sm text-neutral-700 dark:text-neutral-300">
               {project.stack.map((s, i) => (
                 <li key={i}>{s}</li>

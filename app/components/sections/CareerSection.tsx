@@ -1,4 +1,5 @@
 import { careers, totalCareerMonths } from "@/app/data/career";
+import { TechIcons } from "@/app/utils/techIcons";
 
 export function CareerSection() {
   return (
@@ -66,6 +67,15 @@ export function CareerSection() {
                 </dd>
               </div>
             </dl>
+
+            {career.description && career.description.tasks.length > 0 && (
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="text-sm text-neutral-500 dark:text-neutral-400">
+                  사용 기술
+                </span>
+                <TechIcons stack={career.description.tasks} size={18} />
+              </div>
+            )}
 
             {career.description && (
               <div className="mt-4 rounded-lg border border-neutral-200 bg-white p-4 dark:border-neutral-700 dark:bg-neutral-900/30">
