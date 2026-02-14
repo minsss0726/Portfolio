@@ -1,5 +1,6 @@
 import { Navbar } from "@/app/components/layout/Navbar";
 import { ProfileSection } from "@/app/components/sections/ProfileSection";
+import { CareerSection } from "@/app/components/sections/CareerSection";
 import { EducationSection } from "@/app/components/sections/EducationSection";
 import { CertificationsSection } from "@/app/components/sections/CertificationsSection";
 import { TrainingSection } from "@/app/components/sections/TrainingSection";
@@ -34,6 +35,20 @@ export default function Home() {
           <CertificationsSection />
           <TrainingSection />
           <AwardsSection />
+        </section>
+
+        <section
+          id="career"
+          className="scroll-mt-20 flex flex-col gap-12"
+          aria-labelledby="career-section-heading"
+        >
+          <h2
+            id="career-section-heading"
+            className="text-2xl font-bold text-neutral-900 dark:text-neutral-100"
+          >
+            경력사항
+          </h2>
+          <CareerSection />
         </section>
       </main>
     </div>

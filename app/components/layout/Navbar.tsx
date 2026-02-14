@@ -25,6 +25,14 @@ export function Navbar() {
               프로필
             </a>
           </li>
+          <li>
+            <a
+              href="#career"
+              className="text-sm font-medium text-neutral-600 underline-offset-4 hover:underline dark:text-neutral-400 dark:hover:text-neutral-200"
+            >
+              경력사항
+            </a>
+          </li>
         </ul>
       </div>
     </nav>
