@@ -97,7 +97,6 @@ export const projects: ProjectItem[] = [
     shortDescription:
       "폐기 예정 음식 저가 판매·합리적 구매가 가능한 멀티샵 플랫폼",
     period: "2025.06.16 ~ 2025.07.11",
-    link: "https://ohgoodteam.github.io/OhGoodFood/",
     description:
       "Spring Framework/JSP 기반의 멀티샵 플랫폼. 판매자는 폐기 처리해야 하는 음식들을 정가보다 싼 가격으로 판매해 재고 처리 비용과 불필요한 폐기를 줄일 수 있고, 구매자는 상품을 합리적이고 싼 가격에 구매할 수 있음",
     contribution:
@@ -129,7 +128,6 @@ export const projects: ProjectItem[] = [
     name: "오조은목 (1:1 오목 게임)",
     shortDescription: "Spring Legacy·WebSocket 기반 실시간 1:1 오목 웹 서비스",
     period: "2025.05.25 ~ 2025.05.30",
-    link: "https://github.com/minsss0726/OmokWebService",
     description:
       "Spring Legacy, WebSocket 기반의 실시간 1:1 오목 게임 웹 서비스",
     contribution:
