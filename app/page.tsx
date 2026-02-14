@@ -5,6 +5,7 @@ import { EducationSection } from "@/app/components/sections/EducationSection";
 import { CertificationsSection } from "@/app/components/sections/CertificationsSection";
 import { TrainingSection } from "@/app/components/sections/TrainingSection";
 import { AwardsSection } from "@/app/components/sections/AwardsSection";
+import { ProjectsSection } from "@/app/components/sections/ProjectsSection";
 
 export default function Home() {
   return (
@@ -49,6 +50,20 @@ export default function Home() {
             경력사항
           </h2>
           <CareerSection />
+        </section>
+
+        <section
+          id="projects"
+          className="scroll-mt-20 flex flex-col gap-12"
+          aria-labelledby="projects-section-heading"
+        >
+          <h2
+            id="projects-section-heading"
+            className="text-2xl font-bold text-neutral-900 dark:text-neutral-100"
+          >
+            프로젝트
+          </h2>
+          <ProjectsSection />
         </section>
       </main>
     </div>

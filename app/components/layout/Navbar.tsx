@@ -33,6 +33,14 @@ export function Navbar() {
               경력사항
             </a>
           </li>
+          <li>
+            <a
+              href="#projects"
+              className="text-sm font-medium text-neutral-600 underline-offset-4 hover:underline dark:text-neutral-400 dark:hover:text-neutral-200"
+            >
+              프로젝트
+            </a>
+          </li>
         </ul>
       </div>
     </nav>
