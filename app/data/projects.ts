@@ -20,6 +20,12 @@ export interface ProjectItem {
   /** 사용 스택 (글 형태, 추후 이미지 대체 가능) */
   stack: string[];
   tasks: string[];
+  /** 상세 팝업용 추가 이미지 (예: UI 화면 모음) */
+  detailImage?: string;
+  /** 상세 팝업용 추가 이미지 여러 장 (detailImage 대신 사용 가능) */
+  detailImages?: string[];
+  /** 상세 팝업에 표시할 페이지/화면 항목 라벨 (detailImage와 함께 사용) */
+  detailPageLabels?: string[];
 }
 
 export const projects: ProjectItem[] = [
@@ -88,6 +94,14 @@ export const projects: ProjectItem[] = [
       "Docker를 활용한 컨테이너화",
       "JavaScript SDK 패키지 개발 — 결제 위젯",
     ],
+    detailImages: [
+      "/images/ohgoodpaypage1.png",
+      "/images/ohgoodpaypage2.png",
+      "/images/ohgoodpaypage3.png",
+      "/images/ohgoodpaypage4.png",
+      "/images/ohgoodpaypage5.png",
+      "/images/ohgoodpaypage6.png",
+    ],
   },
   {
     id: "ohgoodfood",
@@ -122,6 +136,11 @@ export const projects: ProjectItem[] = [
       "JavaScript/jQuery AJAX — 비동기 처리, 실시간 데이터 업데이트",
       "XSS 방지 보안 — 필터링, 입력 검증",
     ],
+    detailImages: [
+      "/images/ohgoodfoodpage1.png",
+      "/images/ohgoodfoodpage2.png",
+      "/images/ohgoodfoodpage3.png",
+    ],
   },
   {
     id: "omok",
@@ -132,6 +151,19 @@ export const projects: ProjectItem[] = [
       "Spring Legacy, WebSocket 기반의 실시간 1:1 오목 게임 웹 서비스",
     contribution:
       "총 5명 — 팀 리더(업무 분담·일정 관리), 게임 관련 백엔드·프론트엔드 전담, WebSocket 구현",
+    detailImage: "/images/ohgoodomokpage1.png",
+    detailPageLabels: [
+      "인트로",
+      "회원가입",
+      "방 목록",
+      "방 만들기",
+      "게임",
+      "Win 팝업",
+      "Lose 팝업",
+      "랭킹",
+      "전적 조회",
+      "프로필 변경",
+    ],
     stack: [
       "Spring Legacy, Servlet (@WebServlet) RESTful API",
       "Service-DAO-Model 계층 분리, JSP/EL/JSTL",

@@ -182,6 +182,56 @@ function ProjectDetailModal({
               ))}
             </ul>
           </div>
+          {((project.detailImages?.length ?? 0) > 0 || project.detailImage) && (
+            <div>
+              <h3 className="mb-2 text-sm font-medium text-neutral-500 dark:text-neutral-400">
+                주요 화면
+              </h3>
+              {project.detailImages && project.detailImages.length > 0 ? (
+                <div className="space-y-4">
+                  {project.detailImages.map((src, i) => (
+                    <div
+                      key={i}
+                      className="relative w-full overflow-hidden rounded-xl bg-neutral-100 dark:bg-neutral-900"
+                    >
+                      <img
+                        src={src}
+                        alt=""
+                        className="h-full w-full object-contain object-center"
+                      />
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                project.detailImage && (
+                  <div className="relative w-full overflow-hidden rounded-xl bg-neutral-100 dark:bg-neutral-900">
+                    <img
+                      src={project.detailImage}
+                      alt=""
+                      className="h-full w-full object-contain object-center"
+                    />
+                  </div>
+                )
+              )}
+              {project.detailPageLabels && project.detailPageLabels.length > 0 && (
+                <div className="mt-3">
+                  <p className="mb-1.5 text-xs font-medium text-neutral-500 dark:text-neutral-400">
+                    페이지 항목
+                  </p>
+                  <ul className="flex flex-wrap gap-1.5">
+                    {project.detailPageLabels.map((label, i) => (
+                      <li
+                        key={i}
+                        className="rounded-md border border-neutral-200 bg-neutral-50 px-2 py-1 text-xs text-neutral-700 dark:border-neutral-700 dark:bg-neutral-800/50 dark:text-neutral-300"
+                      >
+                        {label}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+          )}
         </div>
       </div>
     </div>
