@@ -17,6 +17,10 @@ export default function Home() {
       <main className="mx-auto max-w-5xl px-4 py-16 pb-24 md:px-6 md:py-24">
         <IntroHero />
 
+        <p className="mb-6 text-center text-sm leading-relaxed text-neutral-500 sm:text-left dark:text-neutral-400">
+          현재 페이지는 Next.js 기반으로 Vercel로 배포된 포트폴리오 페이지입니다.
+        </p>
+
         <nav
           className="mb-16 flex justify-center sm:justify-start md:mb-20"
           aria-label="GitHub 링크"
