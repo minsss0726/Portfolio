@@ -232,6 +232,18 @@ function ProjectDetailModal({
               )}
             </div>
           )}
+          {project.results && project.results.length > 0 && (
+            <div>
+              <h3 className="mb-2 text-sm font-medium text-neutral-500 dark:text-neutral-400">
+                결과
+              </h3>
+              <ul className="list-inside list-disc space-y-1 text-sm text-neutral-700 dark:text-neutral-300">
+                {project.results.map((r, i) => (
+                  <li key={i}>{r}</li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
       </div>
     </div>

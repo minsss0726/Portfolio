@@ -26,6 +26,8 @@ export interface ProjectItem {
   detailImages?: string[];
   /** 상세 팝업에 표시할 페이지/화면 항목 라벨 (detailImage와 함께 사용) */
   detailPageLabels?: string[];
+  /** 상세 팝업 마지막에 표시할 결과 항목 (선택) */
+  results?: string[];
 }
 
 export const projects: ProjectItem[] = [
@@ -167,6 +169,10 @@ export const projects: ProjectItem[] = [
       "React, TypeScript 기반의 테스트 뷰 구현",
       "k6 설정을 통한 1000건 요청 부하 테스트 구현",
       "Lua Script를 이용한 Redis 컨트롤",
+    ],
+    results: [
+      "쿠폰의 자연 개수를 RDB 접근이 아닌 초기 개수를 Redis에 캐싱해 요청 시 RDB에 저장된 값을 통해 더 빠른 요청과 정확한 응답을 할 수 있게 구현함.",
+      "SortedSet과 ClientIP를 통해 중복 요청과 봇 접근을 방지",
     ],
   },
   {
