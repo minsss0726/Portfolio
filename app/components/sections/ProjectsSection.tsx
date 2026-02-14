@@ -15,7 +15,7 @@ function ProjectCard({
     <button
       type="button"
       onClick={onClick}
-      className="w-full rounded-xl border border-neutral-200 bg-neutral-50 p-5 text-left transition hover:border-neutral-300 hover:bg-neutral-100 focus:outline-none focus:ring-2 focus:ring-neutral-400 dark:border-neutral-800 dark:bg-neutral-900/50 dark:hover:border-neutral-700 dark:hover:bg-neutral-800/50 dark:focus:ring-neutral-600"
+      className="w-full rounded-2xl border border-neutral-200 bg-neutral-50/50 p-6 text-left transition-all duration-200 ease-in-out hover:scale-[1.01] hover:border-neutral-300 hover:bg-neutral-100 focus:outline-none focus:ring-1 focus:ring-neutral-900 dark:border-neutral-800 dark:bg-neutral-900/30 dark:hover:border-neutral-700 dark:hover:bg-neutral-800/50 dark:focus:ring-neutral-100 md:p-8"
       aria-label={`${project.name} 상세 보기`}
     >
       <h3 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100">
@@ -62,22 +62,22 @@ function ProjectDetailModal({
       aria-labelledby="project-detail-title"
     >
       <div
-        className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+        className="absolute inset-0 bg-black/40 backdrop-blur-sm transition-opacity duration-200"
         aria-hidden="true"
         onClick={onClose}
       />
-      <div className="relative z-10 max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-xl border border-neutral-200 bg-white shadow-xl dark:border-neutral-800 dark:bg-neutral-900">
-        <div className="sticky top-0 z-10 flex items-center justify-between border-b border-neutral-200 bg-white px-5 py-4 dark:border-neutral-800 dark:bg-neutral-900">
+      <div className="relative z-10 max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-2xl border border-neutral-200 bg-white shadow-sm dark:border-neutral-800 dark:bg-neutral-950">
+        <div className="sticky top-0 z-10 flex items-center justify-between border-b border-neutral-200 bg-white px-6 py-4 dark:border-neutral-800 dark:bg-neutral-950">
           <h2
             id="project-detail-title"
-            className="text-xl font-bold text-neutral-900 dark:text-neutral-100"
+            className="text-2xl font-semibold tracking-tight text-neutral-900 dark:text-neutral-100"
           >
             {project.name}
           </h2>
           <button
             type="button"
             onClick={onClose}
-            className="rounded-lg p-2 text-neutral-500 hover:bg-neutral-100 hover:text-neutral-700 dark:hover:bg-neutral-800 dark:hover:text-neutral-300"
+            className="rounded-2xl p-2 text-neutral-500 transition-all duration-200 ease-in-out hover:bg-neutral-100 hover:text-neutral-900 dark:hover:bg-neutral-800 dark:hover:text-neutral-100"
             aria-label="닫기"
           >
             <span className="text-2xl leading-none" aria-hidden="true">
@@ -85,7 +85,7 @@ function ProjectDetailModal({
             </span>
           </button>
         </div>
-        <div className="space-y-6 p-5">
+        <div className="space-y-6 p-6">
           <div className="flex flex-wrap items-center gap-2 text-sm text-neutral-500 dark:text-neutral-400">
             <span>{project.period}</span>
             {project.link && (
@@ -95,7 +95,7 @@ function ProjectDetailModal({
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-neutral-700 underline underline-offset-2 hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-neutral-100"
+                  className="font-medium text-neutral-900 underline underline-offset-2 transition-all duration-200 ease-in-out hover:opacity-80 dark:text-neutral-100"
                 >
                   링크 열기
                 </a>
@@ -154,7 +154,7 @@ export function ProjectsSection() {
 
   return (
     <section
-      className="rounded-xl border border-neutral-200 bg-neutral-50 p-6 dark:border-neutral-800 dark:bg-neutral-900/50"
+      className="rounded-2xl border border-neutral-200 bg-neutral-50/50 p-6 dark:border-neutral-800 dark:bg-neutral-900/30 md:p-8"
       aria-labelledby="projects-heading"
     >
       <h2

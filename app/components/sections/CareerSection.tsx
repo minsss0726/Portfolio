@@ -4,7 +4,7 @@ import { TechIcons } from "@/app/utils/techIcons";
 export function CareerSection() {
   return (
     <section
-      className="rounded-xl border border-neutral-200 bg-neutral-50 p-6 dark:border-neutral-800 dark:bg-neutral-900/50"
+      className="rounded-2xl border border-neutral-200 bg-neutral-50/50 p-6 dark:border-neutral-800 dark:bg-neutral-900/30 md:p-8"
       aria-labelledby="career-heading"
     >
       <div className="mb-4 flex flex-wrap items-baseline justify-between gap-2">
@@ -78,7 +78,7 @@ export function CareerSection() {
             )}
 
             {career.description && (
-              <div className="mt-4 rounded-lg border border-neutral-200 bg-white p-4 dark:border-neutral-700 dark:bg-neutral-900/30">
+              <div className="mt-4 rounded-2xl border border-neutral-200 bg-white p-4 dark:border-neutral-800 dark:bg-neutral-900/50">
                 <h3 className="mb-3 text-base font-semibold text-neutral-800 dark:text-neutral-200">
                   경력기술서
                 </h3>

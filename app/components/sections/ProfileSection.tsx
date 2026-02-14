@@ -3,7 +3,7 @@ import { profile } from "@/app/data/profile";
 export function ProfileSection() {
   return (
     <section
-      className="rounded-xl border border-neutral-200 bg-neutral-50 p-6 dark:border-neutral-800 dark:bg-neutral-900/50"
+      className="rounded-2xl border border-neutral-200 bg-neutral-50/50 p-6 dark:border-neutral-800 dark:bg-neutral-900/30 md:p-8"
       aria-labelledby="profile-heading"
     >
       <h2
@@ -36,7 +36,7 @@ export function ProfileSection() {
           <dd>
             <a
               href={`mailto:${profile.email}`}
-              className="font-medium text-blue-600 underline decoration-blue-600/30 underline-offset-2 hover:decoration-blue-600 dark:text-blue-400 dark:decoration-blue-400/30 dark:hover:decoration-blue-400"
+              className="font-medium text-neutral-900 underline underline-offset-2 transition-all duration-200 ease-in-out hover:opacity-80 dark:text-neutral-100"
             >
               {profile.email}
             </a>

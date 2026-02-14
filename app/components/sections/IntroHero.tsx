@@ -29,14 +29,16 @@ export function IntroHero() {
   const nameLen = NAME.length;
 
   return (
-    <header className="mb-12 text-center sm:text-left">
+    <header className="mb-16 text-center sm:text-left md:mb-20">
       <h1
-        className="min-h-[4.5rem] text-3xl font-bold leading-tight tracking-tight sm:min-h-[5rem] sm:text-4xl"
+        className="min-h-[4.5rem] text-4xl font-semibold leading-tight tracking-tight sm:min-h-[5rem] md:min-h-[6rem] md:text-5xl"
         aria-label={FULL_TEXT}
       >
         {displayLength <= beforeLen ? (
           <>
-            {FULL_TEXT.slice(0, displayLength)}
+            <span className="text-neutral-900 dark:text-neutral-100">
+              {FULL_TEXT.slice(0, displayLength)}
+            </span>
             {showCursor && (
               <span
                 className="ml-0.5 inline-block h-[1em] w-0.5 animate-pulse bg-neutral-900 dark:bg-neutral-100"
@@ -46,24 +48,24 @@ export function IntroHero() {
           </>
         ) : displayLength < beforeLen + nameLen ? (
           <>
-            {BEFORE_NAME}
-            <span className="bg-gradient-to-r from-violet-600 to-fuchsia-500 bg-clip-text text-transparent">
+            <span className="text-neutral-900 dark:text-neutral-100">{BEFORE_NAME}</span>
+            <span className="font-semibold text-blue-600 dark:text-blue-400">
               {NAME.slice(0, displayLength - beforeLen)}
             </span>
             {showCursor && (
               <span
-                className="ml-0.5 inline-block h-[1em] w-0.5 animate-pulse bg-violet-500"
+                className="ml-0.5 inline-block h-[1em] w-0.5 animate-pulse bg-neutral-900 dark:bg-neutral-100"
                 aria-hidden
               />
             )}
           </>
         ) : (
           <>
-            {BEFORE_NAME}
-            <span className="bg-gradient-to-r from-violet-600 to-fuchsia-500 bg-clip-text text-transparent">
-              {NAME}
+            <span className="text-neutral-900 dark:text-neutral-100">{BEFORE_NAME}</span>
+            <span className="font-semibold text-blue-600 dark:text-blue-400">{NAME}</span>
+            <span className="text-neutral-900 dark:text-neutral-100">
+              {AFTER_NAME.slice(0, displayLength - beforeLen - nameLen)}
             </span>
-            {AFTER_NAME.slice(0, displayLength - beforeLen - nameLen)}
             {showCursor && displayLength < FULL_TEXT.length && (
               <span
                 className="ml-0.5 inline-block h-[1em] w-0.5 animate-pulse bg-neutral-900 dark:bg-neutral-100"
@@ -74,7 +76,7 @@ export function IntroHero() {
         )}
       </h1>
       {isComplete && (
-        <p className="mt-3 animate-fade-in-up text-neutral-500 dark:text-neutral-400 sm:mt-4">
+        <p className="mt-4 animate-fade-in-up leading-relaxed text-neutral-500 sm:mt-5 dark:text-neutral-400">
           안녕하세요, 방문해 주셔서 감사합니다.
         </p>
       )}

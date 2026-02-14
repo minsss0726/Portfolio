@@ -3,7 +3,7 @@ import { education } from "@/app/data/education";
 export function EducationSection() {
   return (
     <section
-      className="rounded-xl border border-neutral-200 bg-neutral-50 p-6 dark:border-neutral-800 dark:bg-neutral-900/50"
+      className="rounded-2xl border border-neutral-200 bg-neutral-50/50 p-6 dark:border-neutral-800 dark:bg-neutral-900/30 md:p-8"
       aria-labelledby="education-heading"
     >
       <h2

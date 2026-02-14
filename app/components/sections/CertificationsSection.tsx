@@ -3,7 +3,7 @@ import { certifications } from "@/app/data/certifications";
 export function CertificationsSection() {
   return (
     <section
-      className="rounded-xl border border-neutral-200 bg-neutral-50 p-6 dark:border-neutral-800 dark:bg-neutral-900/50"
+      className="rounded-2xl border border-neutral-200 bg-neutral-50/50 p-6 dark:border-neutral-800 dark:bg-neutral-900/30 md:p-8"
       aria-labelledby="certifications-heading"
     >
       <h2

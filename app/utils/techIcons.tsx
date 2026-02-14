@@ -104,7 +104,7 @@ export function TechIcons({
         <li key={label} className="flex items-center gap-1.5">
           <Icon
             size={size}
-            style={{ color: color || "currentColor" }}
+            style={{ color: color ?? "currentColor" }}
             className="shrink-0"
             title={label}
             aria-hidden
@@ -138,7 +138,7 @@ export function TechIconsOnly({
         <li key={label}>
           <Icon
             size={size}
-            style={{ color: color || "currentColor" }}
+            style={{ color: color ?? "currentColor" }}
             className="shrink-0"
             title={label}
             aria-hidden

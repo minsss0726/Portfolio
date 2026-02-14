@@ -10,20 +10,20 @@ import { ProjectsSection } from "@/app/components/sections/ProjectsSection";
 
 export default function Home() {
   return (
-    <div className="min-h-screen font-[family-name:var(--font-geist-sans)]">
+    <div className="min-h-screen font-[family-name:var(--font-geist-sans)] bg-white dark:bg-neutral-950">
       <Navbar />
 
-      <main className="mx-auto max-w-2xl px-4 py-8 pb-20 sm:px-6 sm:py-12">
+      <main className="mx-auto max-w-5xl px-4 py-16 pb-24 md:px-6 md:py-24">
         <IntroHero />
 
         <section
           id="profile"
-          className="scroll-mt-20 mb-24 flex flex-col gap-12"
+          className="scroll-mt-20 flex flex-col gap-12 py-16 md:py-24"
           aria-labelledby="profile-section-heading"
         >
           <h2
             id="profile-section-heading"
-            className="text-2xl font-bold text-neutral-900 dark:text-neutral-100"
+            className="text-2xl font-semibold tracking-tight text-neutral-900 dark:text-neutral-100 md:text-3xl"
           >
             프로필
           </h2>
@@ -36,12 +36,12 @@ export default function Home() {
 
         <section
           id="career"
-          className="scroll-mt-20 mb-24 flex flex-col gap-12"
+          className="scroll-mt-20 flex flex-col gap-12 py-16 md:py-24"
           aria-labelledby="career-section-heading"
         >
           <h2
             id="career-section-heading"
-            className="text-2xl font-bold text-neutral-900 dark:text-neutral-100"
+            className="text-2xl font-semibold tracking-tight text-neutral-900 dark:text-neutral-100 md:text-3xl"
           >
             경력사항
           </h2>
@@ -50,12 +50,12 @@ export default function Home() {
 
         <section
           id="projects"
-          className="scroll-mt-20 flex flex-col gap-12"
+          className="scroll-mt-20 flex flex-col gap-12 py-16 md:py-24"
           aria-labelledby="projects-section-heading"
         >
           <h2
             id="projects-section-heading"
-            className="text-2xl font-bold text-neutral-900 dark:text-neutral-100"
+            className="text-2xl font-semibold tracking-tight text-neutral-900 dark:text-neutral-100 md:text-3xl"
           >
             프로젝트
           </h2>

@@ -9,7 +9,7 @@ export function Navbar() {
       className="sticky top-0 z-50 border-b border-neutral-200 bg-white/80 px-4 py-3 backdrop-blur-sm dark:border-neutral-800 dark:bg-neutral-950/80"
       aria-label="메인 내비게이션"
     >
-      <div className="mx-auto flex max-w-2xl items-center justify-between">
+      <div className="mx-auto flex max-w-5xl items-center justify-between">
         <a
           href="#"
           className="text-lg font-bold text-neutral-900 dark:text-neutral-100"
@@ -20,7 +20,7 @@ export function Navbar() {
           <li>
             <a
               href="#profile"
-              className="text-sm font-medium text-neutral-600 underline-offset-4 hover:underline dark:text-neutral-400 dark:hover:text-neutral-200"
+              className="text-sm font-medium text-neutral-600 transition-all duration-200 ease-in-out hover:text-neutral-900 hover:underline dark:text-neutral-400 dark:hover:text-neutral-100"
             >
               프로필
             </a>
@@ -28,7 +28,7 @@ export function Navbar() {
           <li>
             <a
               href="#career"
-              className="text-sm font-medium text-neutral-600 underline-offset-4 hover:underline dark:text-neutral-400 dark:hover:text-neutral-200"
+              className="text-sm font-medium text-neutral-600 transition-all duration-200 ease-in-out hover:text-neutral-900 hover:underline dark:text-neutral-400 dark:hover:text-neutral-100"
             >
               경력사항
             </a>
@@ -36,7 +36,7 @@ export function Navbar() {
           <li>
             <a
               href="#projects"
-              className="text-sm font-medium text-neutral-600 underline-offset-4 hover:underline dark:text-neutral-400 dark:hover:text-neutral-200"
+              className="text-sm font-medium text-neutral-600 transition-all duration-200 ease-in-out hover:text-neutral-900 hover:underline dark:text-neutral-400 dark:hover:text-neutral-100"
             >
               프로젝트
             </a>
