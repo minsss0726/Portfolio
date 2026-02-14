@@ -1,3 +1,4 @@
+import { FaGithub } from "react-icons/fa";
 import { Navbar } from "@/app/components/layout/Navbar";
 import { IntroHero } from "@/app/components/sections/IntroHero";
 import { ProfileSection } from "@/app/components/sections/ProfileSection";
@@ -15,6 +16,21 @@ export default function Home() {
 
       <main className="mx-auto max-w-5xl px-4 py-16 pb-24 md:px-6 md:py-24">
         <IntroHero />
+
+        <nav
+          className="mb-16 flex justify-center sm:justify-start md:mb-20"
+          aria-label="GitHub 링크"
+        >
+          <a
+            href="https://github.com/minsss0726"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-lg border border-neutral-200 bg-neutral-50/50 px-4 py-2.5 text-neutral-700 transition-colors hover:border-neutral-300 hover:bg-neutral-100 hover:text-neutral-900 dark:border-neutral-700 dark:bg-neutral-800/50 dark:text-neutral-300 dark:hover:border-neutral-600 dark:hover:bg-neutral-800 dark:hover:text-neutral-100"
+          >
+            <FaGithub className="h-5 w-5" aria-hidden />
+            <span>GitHub</span>
+          </a>
+        </nav>
 
         <section
           id="profile"
