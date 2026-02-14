@@ -21,6 +21,8 @@ import {
   SiAmazonwebservices,
   SiOracle,
   SiAxios,
+  SiRedis,
+  SiTypescript,
 } from "react-icons/si";
 import type { IconType } from "react-icons";
 
@@ -51,6 +53,8 @@ const TECH_MAP: {
   { pattern: /\bjQuery|jquery\b/i, icon: SiJquery, label: "jQuery", color: "#0769AD" },
   { pattern: /\bJavaScript\b|JS\b/i, icon: SiJavascript, label: "JavaScript", color: "#F7DF1E" },
   { pattern: /\bJava\b/i, icon: SiOpenjdk, label: "Java", color: "#437291" },
+  { pattern: /\bRedis\b/i, icon: SiRedis, label: "Redis", color: "#DC382D" },
+  { pattern: /\bTypeScript\b/i, icon: SiTypescript, label: "TypeScript", color: "#3178C6" },
 ];
 
 function matchTech(text: string): { icon: IconType; label: string; color: string }[] {

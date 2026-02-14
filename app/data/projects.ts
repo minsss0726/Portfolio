@@ -143,6 +143,33 @@ export const projects: ProjectItem[] = [
     ],
   },
   {
+    id: "live-coupon",
+    name: "라이브 쿠폰 발급 서비스 (Redis 활용 대용량 요청 처리)",
+    shortDescription:
+      "일정 시간 100개 쿠폰 발행, k6로 1000건 요청 테스트. Redis 캐싱·RDB 연동으로 빠른·정확한 응답, SortedSet·ClientIP로 중복·봇 방지",
+    period: "2026.02",
+    description:
+      "SpringBoot, React 기반의 라이브 쿠폰 발급 서비스. 일정 시간에 100개의 쿠폰을 발행하고 k6를 통해 1000개의 요청을 생성하여 Redis를 통해 대용량 요청을 처리한다. Redis 사용과 RDB 연결에 대한 설계를 통해, 쿠폰의 자연 개수를 RDB 접근이 아닌 초기 개수를 Redis에 캐싱해 요청 시 RDB에 저장된 값을 통해 더 빠른 요청과 정확한 응답을 구현하였다. SortedSet과 ClientIP를 통해 중복 요청과 봇 접근을 방지하였다.",
+    contribution:
+      "1인 개인 프로젝트 — 백엔드/프론트엔드, RDB·Redis 설정",
+    stack: [
+      "Spring Boot",
+      "Spring Security",
+      "React",
+      "TypeScript",
+      "MariaDB",
+      "Redis",
+      "Lua Script",
+    ],
+    tasks: [
+      "Redis 백엔드 환경 구성",
+      "이벤트 및 쿠폰 관련 REST Controller 구현",
+      "React, TypeScript 기반의 테스트 뷰 구현",
+      "k6 설정을 통한 1000건 요청 부하 테스트 구현",
+      "Lua Script를 이용한 Redis 컨트롤",
+    ],
+  },
+  {
     id: "omok",
     name: "오조은목 (1:1 오목 게임)",
     shortDescription: "Spring Legacy·WebSocket 기반 실시간 1:1 오목 웹 서비스",
