@@ -4,10 +4,8 @@ import { IntroHero } from "@/app/components/sections/IntroHero";
 import { ProfileSection } from "@/app/components/sections/ProfileSection";
 import { CodingTestSection } from "@/app/components/sections/CodingTestSection";
 import { CareerSection } from "@/app/components/sections/CareerSection";
-import { EducationSection } from "@/app/components/sections/EducationSection";
 import { CertificationsSection } from "@/app/components/sections/CertificationsSection";
 import { TrainingSection } from "@/app/components/sections/TrainingSection";
-import { AwardsSection } from "@/app/components/sections/AwardsSection";
 import { ProjectsSection } from "@/app/components/sections/ProjectsSection";
 
 export default function Home() {
@@ -49,10 +47,8 @@ export default function Home() {
             프로필
           </h2>
           <ProfileSection />
-          <EducationSection />
           <CertificationsSection />
           <TrainingSection />
-          <AwardsSection />
         </section>
 
         <section
