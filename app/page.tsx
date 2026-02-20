@@ -2,6 +2,7 @@ import { FaGithub } from "react-icons/fa";
 import { Navbar } from "@/app/components/layout/Navbar";
 import { IntroHero } from "@/app/components/sections/IntroHero";
 import { ProfileSection } from "@/app/components/sections/ProfileSection";
+import { CodingTestSection } from "@/app/components/sections/CodingTestSection";
 import { CareerSection } from "@/app/components/sections/CareerSection";
 import { EducationSection } from "@/app/components/sections/EducationSection";
 import { CertificationsSection } from "@/app/components/sections/CertificationsSection";
@@ -52,6 +53,20 @@ export default function Home() {
           <CertificationsSection />
           <TrainingSection />
           <AwardsSection />
+        </section>
+
+        <section
+          id="coding-test"
+          className="scroll-mt-20 flex flex-col gap-12 py-16 md:py-24"
+          aria-labelledby="coding-test-section-heading"
+        >
+          <h2
+            id="coding-test-section-heading"
+            className="text-2xl font-semibold tracking-tight text-neutral-900 dark:text-neutral-100 md:text-3xl"
+          >
+            코딩테스트
+          </h2>
+          <CodingTestSection />
         </section>
 
         <section

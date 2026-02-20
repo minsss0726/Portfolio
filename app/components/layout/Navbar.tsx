@@ -27,6 +27,14 @@ export function Navbar() {
           </li>
           <li>
             <a
+              href="#coding-test"
+              className="text-sm font-medium text-neutral-600 transition-all duration-200 ease-in-out hover:text-neutral-900 hover:underline dark:text-neutral-400 dark:hover:text-neutral-100"
+            >
+              코딩테스트
+            </a>
+          </li>
+          <li>
+            <a
               href="#career"
               className="text-sm font-medium text-neutral-600 transition-all duration-200 ease-in-out hover:text-neutral-900 hover:underline dark:text-neutral-400 dark:hover:text-neutral-100"
             >
