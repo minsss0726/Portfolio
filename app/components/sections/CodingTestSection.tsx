@@ -31,7 +31,7 @@ export function CodingTestSection() {
         나가고 있습니다.
       </p>
 
-      <div className="mb-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mb-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
         <figure className="overflow-hidden rounded-xl border border-neutral-200 dark:border-neutral-700">
           <img
             src={IMAGES.stats}
@@ -52,7 +52,7 @@ export function CodingTestSection() {
             AI 종합 분석, 영역별 분석, 종합 점수 53.1점 상위권
           </figcaption>
         </figure>
-        <figure className="overflow-hidden rounded-xl border border-neutral-200 dark:border-neutral-700 sm:col-span-2 lg:col-span-1">
+        <figure className="overflow-hidden rounded-xl border border-neutral-200 dark:border-neutral-700 sm:col-span-2">
           <img
             src={IMAGES.sql}
             alt="SQL 학습 영역별 문제 세트 및 평균 점수"
