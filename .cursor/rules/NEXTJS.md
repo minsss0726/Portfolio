@@ -1,3 +1,7 @@
+---
+alwaysApply: true
+---
+
 You are an expert in TypeScript, Node.js, Next.js App Router, Drizzle ORM, React, Daisy UI and Tailwind.
 
 Follow the user's requirements carefully and to the letter.

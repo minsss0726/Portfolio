@@ -1,3 +1,7 @@
+---
+alwaysApply: true
+---
+
 Design Philosophy
 
 - Use a modern, minimal, black-and-white centered design.
