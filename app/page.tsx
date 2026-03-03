@@ -52,20 +52,6 @@ export default function Home() {
         </section>
 
         <section
-          id="coding-test"
-          className="scroll-mt-20 flex flex-col gap-12 py-16 md:py-24"
-          aria-labelledby="coding-test-section-heading"
-        >
-          <h2
-            id="coding-test-section-heading"
-            className="text-2xl font-semibold tracking-tight text-neutral-900 dark:text-neutral-100 md:text-3xl"
-          >
-            코딩테스트
-          </h2>
-          <CodingTestSection />
-        </section>
-
-        <section
           id="career"
           className="scroll-mt-20 flex flex-col gap-12 py-16 md:py-24"
           aria-labelledby="career-section-heading"
@@ -91,6 +77,20 @@ export default function Home() {
             프로젝트
           </h2>
           <ProjectsSection />
+        </section>
+
+        <section
+          id="coding-test"
+          className="scroll-mt-20 flex flex-col gap-12 py-16 md:py-24"
+          aria-labelledby="coding-test-section-heading"
+        >
+          <h2
+            id="coding-test-section-heading"
+            className="text-2xl font-semibold tracking-tight text-neutral-900 dark:text-neutral-100 md:text-3xl"
+          >
+            코딩테스트
+          </h2>
+          <CodingTestSection />
         </section>
       </main>
     </div>
