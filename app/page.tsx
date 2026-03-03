@@ -44,6 +44,20 @@ export default function Home() {
         </nav>
 
         <section
+          id="career"
+          className="scroll-mt-20 flex flex-col gap-12 py-16 md:py-24"
+          aria-labelledby="career-section-heading"
+        >
+          <h2
+            id="career-section-heading"
+            className="text-2xl font-semibold tracking-tight text-neutral-900 dark:text-neutral-100 md:text-3xl"
+          >
+            경력사항
+          </h2>
+          <CareerSection />
+        </section>
+
+        <section
           id="projects"
           className="scroll-mt-20 flex flex-col gap-12 py-16 md:py-24"
           aria-labelledby="projects-section-heading"
@@ -70,20 +84,6 @@ export default function Home() {
           </h2>
           <CertificationsSection />
           <TrainingSection />
-        </section>
-
-        <section
-          id="career"
-          className="scroll-mt-20 flex flex-col gap-12 py-16 md:py-24"
-          aria-labelledby="career-section-heading"
-        >
-          <h2
-            id="career-section-heading"
-            className="text-2xl font-semibold tracking-tight text-neutral-900 dark:text-neutral-100 md:text-3xl"
-          >
-            경력사항
-          </h2>
-          <CareerSection />
         </section>
 
         <section

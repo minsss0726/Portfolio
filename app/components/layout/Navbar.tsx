@@ -19,6 +19,14 @@ export function Navbar() {
         <ul className="flex items-center gap-6">
           <li>
             <a
+              href="#career"
+              className="text-sm font-medium text-neutral-600 transition-all duration-200 ease-in-out hover:text-neutral-900 hover:underline dark:text-neutral-400 dark:hover:text-neutral-100"
+            >
+              경력사항
+            </a>
+          </li>
+          <li>
+            <a
               href="#projects"
               className="text-sm font-medium text-neutral-600 transition-all duration-200 ease-in-out hover:text-neutral-900 hover:underline dark:text-neutral-400 dark:hover:text-neutral-100"
             >
@@ -31,14 +39,6 @@ export function Navbar() {
               className="text-sm font-medium text-neutral-600 transition-all duration-200 ease-in-out hover:text-neutral-900 hover:underline dark:text-neutral-400 dark:hover:text-neutral-100"
             >
               자격 및 교육
-            </a>
-          </li>
-          <li>
-            <a
-              href="#career"
-              className="text-sm font-medium text-neutral-600 transition-all duration-200 ease-in-out hover:text-neutral-900 hover:underline dark:text-neutral-400 dark:hover:text-neutral-100"
-            >
-              경력사항
             </a>
           </li>
           <li>
