@@ -1,7 +1,6 @@
 import { FaGithub } from "react-icons/fa";
 import { Navbar } from "@/app/components/layout/Navbar";
 import { IntroHero } from "@/app/components/sections/IntroHero";
-import { ProfileSection } from "@/app/components/sections/ProfileSection";
 import { CodingTestSection } from "@/app/components/sections/CodingTestSection";
 import { CareerSection } from "@/app/components/sections/CareerSection";
 import { CertificationsSection } from "@/app/components/sections/CertificationsSection";
@@ -21,8 +20,8 @@ export default function Home() {
         </p>
 
         <nav
-          className="mb-16 flex justify-center sm:justify-start md:mb-20"
-          aria-label="GitHub 링크"
+          className="mb-16 flex flex-col items-center gap-3 sm:items-start md:mb-20"
+          aria-label="GitHub 링크 및 연락처"
         >
           <a
             href="https://github.com/minsss0726"
@@ -33,20 +32,28 @@ export default function Home() {
             <FaGithub className="h-5 w-5" aria-hidden />
             <span>GitHub</span>
           </a>
+          <p className="text-sm text-neutral-600 dark:text-neutral-400">
+            contact :{" "}
+            <a
+              href="mailto:wndtmgld5551@gmail.com"
+              className="underline transition-colors hover:text-neutral-900 dark:hover:text-neutral-100"
+            >
+              wndtmgld5551@gmail.com
+            </a>
+          </p>
         </nav>
 
         <section
-          id="profile"
+          id="certifications-training"
           className="scroll-mt-20 flex flex-col gap-12 py-16 md:py-24"
-          aria-labelledby="profile-section-heading"
+          aria-labelledby="certifications-section-heading"
         >
           <h2
-            id="profile-section-heading"
+            id="certifications-section-heading"
             className="text-2xl font-semibold tracking-tight text-neutral-900 dark:text-neutral-100 md:text-3xl"
           >
-            프로필
+            자격 및 교육
           </h2>
-          <ProfileSection />
           <CertificationsSection />
           <TrainingSection />
         </section>
