@@ -26,7 +26,7 @@ export const trainings: Training[] = [
     ],
     additionalLearning: [
       "Kubernetes(쿠버네티스)를 활용한 컨테이너 오케스트레이션",
-      "협업 툴(Git, Jira 등) 활용 및 팀 프로젝트 워크플로우",
+      "협업 툴(Git, Notion, Slack 등) 활용 및 팀 프로젝트 워크플로우",
       "AI 활용 및 적용 방법",
     ],
   },
