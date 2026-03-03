@@ -68,14 +68,24 @@ export function CareerSection() {
               </div>
             </dl>
 
-            {career.description && career.description.tasks.length > 0 && (
-              <div className="flex flex-wrap items-center gap-2">
-                <span className="text-sm text-neutral-500 dark:text-neutral-400">
-                  사용 기술
-                </span>
-                <TechIcons stack={career.description.tasks} size={18} />
-              </div>
-            )}
+            {career.description && (() => {
+              const flatTasks =
+                career.description.tasksByRole
+                  ? [
+                      ...(career.description.tasksByRole.backend ?? []),
+                      ...(career.description.tasksByRole.frontend ?? []),
+                      ...(career.description.tasksByRole.infrastructure ?? []),
+                    ]
+                  : career.description.tasks ?? [];
+              return flatTasks.length > 0 ? (
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className="text-sm text-neutral-500 dark:text-neutral-400">
+                    사용 기술
+                  </span>
+                  <TechIcons stack={flatTasks} size={18} />
+                </div>
+              ) : null;
+            })()}
 
             {career.description && (
               <div className="mt-4 rounded-2xl border border-neutral-200 bg-white p-4 dark:border-neutral-800 dark:bg-neutral-900/50">
@@ -117,14 +127,45 @@ export function CareerSection() {
                   </div>
                 </dl>
                 <div className="mt-3">
-                  <dt className="mb-1 text-sm text-neutral-500 dark:text-neutral-400">
+                  <dt className="mb-2 text-sm text-neutral-500 dark:text-neutral-400">
                     주요 업무 및 상세 역할
                   </dt>
-                  <ul className="list-inside list-disc space-y-1 text-sm text-neutral-700 dark:text-neutral-300">
-                    {career.description.tasks.map((task, i) => (
-                      <li key={i}>{task}</li>
-                    ))}
-                  </ul>
+                  {career.description.tasksByRole ? (
+                    <div className="space-y-4">
+                      {[
+                        {
+                          label: "백엔드",
+                          tasks: career.description.tasksByRole.backend ?? [],
+                        },
+                        {
+                          label: "프론트엔드",
+                          tasks: career.description.tasksByRole.frontend ?? [],
+                        },
+                        {
+                          label: "인프라",
+                          tasks:
+                            career.description.tasksByRole.infrastructure ?? [],
+                        },
+                      ].filter((g) => g.tasks.length > 0).map((group) => (
+                        <div key={group.label}>
+                          <span className="text-xs font-medium uppercase tracking-wide text-neutral-500 dark:text-neutral-400">
+                            {group.label}
+                          </span>
+                          <ul className="mt-1 list-inside list-disc space-y-1 text-sm text-neutral-700 dark:text-neutral-300">
+                            {group.tasks.map((task, i) => (
+                              <li key={i}>{task}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  ) : career.description.tasks && career.description.tasks.length > 0 ? (
+                    <ul className="list-inside list-disc space-y-1 text-sm text-neutral-700 dark:text-neutral-300">
+                      {career.description.tasks.map((task, i) => (
+                        <li key={i}>{task}</li>
+                      ))}
+                    </ul>
+                  ) : null}
                 </div>
               </div>
             )}
